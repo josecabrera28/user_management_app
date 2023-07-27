@@ -15,6 +15,6 @@ let userSchema = new Schema({
         required: true,
     }
 },
-{collation: "users"});
+{collection: "users"});
 
 module.exports= mongoose.model('user', userSchema);

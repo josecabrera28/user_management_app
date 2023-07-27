@@ -4,6 +4,12 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 const mongoDB = require('mongoose');
 const routes = require('./routes/routes');
+const cors = require('cors');
+
+//receive request from localhost
+app.use(cors({
+    origin: "http://localhost:4200"
+}));
 
 //Start server
 app.listen(3000,(err)=>{
